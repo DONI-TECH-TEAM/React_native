@@ -1,11 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, S } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text numberOfLines={1}>Hello world! we have avery long text a very very long text a very very very looooooooooooong text</Text>
-      
+      <Image style={styles.image} source={require("./assets/logo.png")} />
       <StatusBar style="auto" />
     </View>
   );
@@ -14,8 +13,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#014da7',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  image: {
+    marginBottom: 40,
   },
 });
